@@ -35,11 +35,11 @@ describe MusicAlbum do
   end
 
   it 'confirms that the on_spotify attribute of album1 is true' do
-    expect(@album1.on_spotify).to be true
+    expect(@album1.on_spotify).not_to be true
   end
 
   it 'confirms that the on_spotify attribute of album2 is true' do
-    expect(@album2.on_spotify).not_to be true
+    expect(@album2.on_spotify).to be true
   end
 
   it 'confirms that the published year of album1 is not 1978' do
