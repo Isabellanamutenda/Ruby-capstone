@@ -18,8 +18,8 @@ describe MusicAlbum do
     expect(@album3).not_to be_an_instance_of MusicAlbum
   end
 
-  it 'checks if album_1 name is king' do
-    expect(@album1.name).to eq 'king'
+  it 'checks if album_1 name is King' do
+    expect(@album1.name).to eq 'King'
   end
 
   it 'checks if album_2 name is not Carpe ' do
