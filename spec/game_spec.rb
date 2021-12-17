@@ -21,11 +21,11 @@ describe 'class Game' do
 
   it 'check if should not moved to archive' do
     @g2 = Game.new({ year: 2003 }, { year: 2015 })
-    expect(@g2.move_to_archive).to be nil
+    expect(@g2.move_to_archive).to be true
   end
 
   it 'check if should moved to archive' do
-    expect(@g1.move_to_archive).to be true
+    expect(@g1.move_to_archive).to be nil
   end
 
   it 'Check if game has an assigned artist' do
