@@ -4,7 +4,7 @@ require_relative '../author'
 
 describe 'class Game' do
   before :each do
-    @g1 = Game.new({ year: 2009 }, { year: 2017 })
+    @g1 = Game.new({ year: 2021 }, { year: 2021 })
   end
 
   it 'check @g1 is kind of Item class' do
@@ -12,15 +12,15 @@ describe 'class Game' do
   end
 
   it 'check @g1 publish date ' do
-    expect(@g1.publish_date[:year]).to eq 2009
+    expect(@g1.publish_date[:year]).to eq 2021
   end
 
   it 'check @g1 last played date ' do
-    expect(@g1.last_played_at[:year]).to eq 2017
+    expect(@g1.last_played_at[:year]).to eq 2021
   end
 
   it 'check if should not moved to archive' do
-    @g2 = Game.new({ year: 2009 }, { year: 2020 })
+    @g2 = Game.new({ year: 2003 }, { year: 2015 })
     expect(@g2.move_to_archive).to be nil
   end
 
@@ -37,19 +37,19 @@ end
 
 describe 'Author Class' do
   before :each do
-    @a1 = Author.new('Faizan', 'Zahid')
+    @a1 = Author.new('Ashley', 'Isabella')
     @a2 = Author.new('First', 'Last')
-    @game1 = Game.new({ year: 2010 }, 2015)
-    @game2 = Game.new({ year: 2015 }, 2020)
+    @game1 = Game.new({ year: 2000 }, 2011)
+    @game2 = Game.new({ year: 2003 }, 2015)
     @game3 = Game.new({ year: 2000 }, 2010)
   end
 
   it('check the first name of @a1 obj') do
-    expect(@a1.f_name).to eq 'Faizan'
+    expect(@a1.f_name).to eq 'Ashley'
   end
 
   it('check the last name of @a1 obj') do
-    expect(@a1.l_name).to eq 'Zahid'
+    expect(@a1.l_name).to eq 'Isabella'
   end
 
   it('check the items is empty') do

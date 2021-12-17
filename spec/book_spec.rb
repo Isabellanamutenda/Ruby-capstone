@@ -2,9 +2,9 @@ require_relative 'spec_helper'
 
 RSpec.describe Book do
   before :each do
-    @book1 = Book.new({ day: 12, month: 8, year: 1950 }, 'Mondadori', 'good')
-    @book2 = Book.new({ day: 16, month: 12, year: 2020 }, 'Feltrinelli', 'bad')
-    @book3 = Book.new({ day: 10, month: 1, year: 2020 }, 'Amazon', 'good')
+    @book1 = Book.new({ day: 25, month: 12, year: 1545 }, 'Amanda ngozi', 'women')
+    @book2 = Book.new({ day: 20, month: 8, year: 1999 }, 'Napolin', 'up the hills')
+    @book3 = Book.new({ day: 4, month: 7, year: 2000 }, 'Hill crest', 'women who code')
   end
   it 'Creates a Book object from parameters' do
     expect(@book1).to be_an_instance_of Book
@@ -13,8 +13,8 @@ RSpec.describe Book do
   end
 
   it 'Check for the publisher of the book' do
-    expect(@book1.publisher).to eql 'Mondadori'
-    expect(@book2.publisher).to eql 'Feltrinelli'
+    expect(@book1.publisher).to eql 'Amanda ngozi'
+    expect(@book2.publisher).to eql 'Napolin'
   end
 
   it 'Check if the book is archivable' do
