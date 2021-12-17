@@ -16,7 +16,6 @@
 - To test run rspec spec for all tests
 - To run tests for a specific file run rspec/ spec/<name of the file.rb>
 
-
 ## Video presentation
 https://www.loom.com/share/5a62806c2a3845fc86ac4ecca3d465d1
 
