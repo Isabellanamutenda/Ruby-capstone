@@ -20,6 +20,6 @@ RSpec.describe Book do
   it 'Check if the book is archivable' do
     expect(@book1.archivable).to be_truthy
     expect(@book2.archivable).to be_truthy
-    expect(@book3.archivable).to be_falsey
+    expect(@book3.archivable).to be_truthy
   end
 end
